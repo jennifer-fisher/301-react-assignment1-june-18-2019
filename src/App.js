@@ -11,11 +11,10 @@ import Card from './components/Card/Card';
 function App() {
 
   return (
-
   <div className="content">
    <Card>
-        <h2>Welcome to my first App!</h2>
-        <p>Hello World!</p>
+        <h2>I like this new card!</h2>
+        <p>Thanks Eric for a great class!</p>
     </Card>
     </div>
   );
