@@ -1,23 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Card.module.css';
+import sytles from './Card.module.css';
 
 const Card = (props) => {
+    const {children} = props;
+    return(
+        <div className={sytles.card}>
+            {children}
 
-  return <div className={`${styles.card} `}>
-  <img src={props.cardImage} width="300" height="300" alt={props.altTag}></img>
-  <div>
-  <p className={`${styles.cardName} `}>{props.cardName}</p> 
-  <p className={`${styles.cardTitle} `}>{props.cardTitle}</p> 
-  </div>
-  </div>
-
-};
-
-Card.propTypes = {
-    cardName: PropTypes.string,
-    altTag: PropTypes.string,
-    cardTitle: PropTypes.string,
-    cardImage: PropTypes.string,
+        </div>
+    )
 }
+
+Card.propTypes ={
+    children: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.node,
+    ]),
+}
+
 export default Card;
